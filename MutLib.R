@@ -3,9 +3,9 @@
 #Create a library of peptides with known hot spots (Template-based Peptide Design)
 #written by : Sara Zareei
 
-# Define the original peptide sequence
-original_sequence <- "CGTVGTNTPCC"
-nchar(original_sequence)
+# Define the template peptide sequence
+template_sequence <- "CGTVGTNTPCC"
+nchar(template_sequence)
 
 # Define the possible amino acids for each hot spot
 p2 <- c("C", "F", "Y")
@@ -24,7 +24,7 @@ all_combinations <- expand.grid(p2, p3, p4, p5, p6, p7, p8, p9 )
 # Combine the amino acids into peptide sequences for each combination
 mutant_peptides <- apply(all_combinations, 1, function(x) {
   positions <- c(2, 3, 4, 5, 6, 7, 8, 9)
-  mutant_seq <- original_sequence
+  mutant_seq <- template_sequence
   for (i in seq_along(positions)) {
     aa <- x[i]
     pos <- positions[i]
