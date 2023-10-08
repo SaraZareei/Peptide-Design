@@ -1,9 +1,9 @@
 # Create a library of peptides with known hot spots (Template-based Peptide Design)
 # written by: Sara Zareei
 
-# Define the original peptide sequence
-original_sequence = "CGTVGTNTPCC"
-len(original_sequence)
+# Define the tepmplate peptide sequence
+template_sequence = "CGTVGTNTPCC"
+len(template_sequence)
 
 # Define the possible amino acids for each hot spot
 p2 = ["C", "F", "Y"]
@@ -23,7 +23,7 @@ all_combinations = list(itertools.product(p2, p3, p4, p5, p6, p7, p8, p9))
 mutant_peptides = []
 for combination in all_combinations:
     positions = [2, 3, 4, 5, 6, 7, 8, 9]
-    mutant_seq = original_sequence
+    mutant_seq = template_sequence
     for i, aa in enumerate(combination):
         pos = positions[i]
         mutant_seq = mutant_seq[:pos-1] + aa + mutant_seq[pos:]
