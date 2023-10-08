@@ -3,10 +3,14 @@
 
 #Create a library of peptides with known hot spots (Template-based Peptide Design)
 
-#written by : Sara Zareei
+#written by : Sara Zareei		
+
 #Please cite the code with the following links: 
- R script : https://github.com/SaraZareei/Peptide-Design/blob/main/MutLib.R 	
- python script: https://github.com/SaraZareei/Peptide-Design/blob/main/MutLib.py                                                                                                                  
+
+R script : https://github.com/SaraZareei/Peptide-Design/blob/main/MutLib.R 	
+
+Python script: https://github.com/SaraZareei/Peptide-Design/blob/main/MutLib.py                                                                                                                  
+
 Description :
 Template-based peptide design is a computational method used to design peptides with specific properties or functions. 
 It involves using a known protein structure or a peptide template as a starting point to design a new peptide sequence that can perform a desired function or interact with a specific target.
