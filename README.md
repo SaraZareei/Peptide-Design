@@ -4,7 +4,7 @@
 #Create a library of peptides with known hot spots (Template-based Peptide Design)
 #written by : Sara Zareei
 #Please cite the code with the following links: 
- R script : https://github.com/SaraZareei/Peptide-Design/blob/main/MutLib.R
+ R script : https://github.com/SaraZareei/Peptide-Design/blob/main/MutLib.R 	
  python script: https://github.com/SaraZareei/Peptide-Design/blob/main/MutLib.py
 
 
