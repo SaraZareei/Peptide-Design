@@ -18,12 +18,7 @@ Here is the variables used in the codes:
  all_combinations : a table of all combination as a table 
 
 
-the output of the code is a fasta file containing the following format:
->Seq1
-XXXXXXXXX
->Seq2
-XXXXXXXXXX
->Seq3
-XXXXXXXXXXXXXXXX
+the output of the code is a fasta file containing all mutants indicated and numbered:
+
 
 enjoy and cite!
