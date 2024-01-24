@@ -1,0 +1,45 @@
+#Extraction of FASTA sequences from PDB structures. 
+#written by: Sara Zareei
+#please cite with the following link:
+
+
+
+# Set the working directory to where your PDB files are located
+setwd("C:/your/folder/address")
+
+install.packages("Biostrings")
+
+# Load the required library
+library("Biostrings")
+
+# Get a list of all PDB file names
+pdb_files <- list.files(pattern = "*.pdb")
+
+# Create a function to extract the sequence from a PDB file and convert residue names
+get_sequence <- function(file) {
+  pdb <- readLines(file)
+  residue_names <- grep("^ATOM", pdb, value = TRUE)
+  
+  # Convert three-letter residue names to one-letter code
+  three_letter_codes <- substring(residue_names, 18, 20)
+  one_letter_codes <- aa_convert(three_letter_codes, type = "3to1")
+  
+  sequence <- paste(one_letter_codes, collapse = "")
+  sequence <- gsub("[^A-Z]", "", sequence)
+  return(sequence)
+}
+
+# Create a text file to save the sequences
+output_file <- "sequences.fasta"
+file_conn <- file(output_file, open = "wt")
+
+# Loop over each PDB file, extract the sequence, and write it to the output file
+for (i in 1:length(pdb_files)) {
+  sequence <- get_sequence(pdb_files[i])
+  file_name <- gsub("\\.pdb$", "", pdb_files[i])
+  writeLines(paste0(">", file_name), file_conn)
+  writeLines(sequence, file_conn)
+}
+
+# Close the output file
+close(file_conn)
