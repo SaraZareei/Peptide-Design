@@ -1,7 +1,7 @@
 #Extraction of FASTA sequences from PDB structures. 
 #written by: Sara Zareei
 #please cite with the following link:
-
+#https://github.com/SaraZareei/Peptide-Design/edit/main/ProSeqExtr
 
 
 # Set the working directory to where your PDB files are located
